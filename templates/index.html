@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packet Sniffer Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Packet Sniffer Data</h1>
+        </header>
+        <main>
+            <section class="options">
+                <form action="/start_sniffing" method="post">
+                    <label for="count">Number of Packets:</label>
+                    <input type="number" id="count" name="count" value="5" min="1" required> 
+                    <!-- &nbsp;&nbsp; -->
+                    <label for="filter">Filter:</label>
+                    <select id="filter" name="filter">
+                        <option value="">None</option>
+                        <option value="tcp">TCP</option>
+                        <option value="udp">UDP</option>
+                        <option value="port 80">Port 80</option>
+                    </select>
+                    <button type="submit">Start Sniffing</button>
+                </form>
+            </section>
+            <section class="packet-list">
+                <table id="packet-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Timestamp</th>
+                            <th>IP Source</th>
+                            <th>IP Destination</th>
+                            <th>Source Port</th>
+                            <th>Destination Port</th>
+                            <th>Payload</th>
+                        </tr>
+                    </thead>
+                    <tbody id="packet-data">
+                        {% for packet in packets %}
+                        <tr>
+                            <td>{{ packet['id'] }}</td>
+                            <td>{{ packet['timestamp'] }}</td>
+                            <td>{{ packet['ip_src'] }}</td>
+                            <td>{{ packet['ip_dst'] }}</td>
+                            <td>{{ packet['tcp_sport'] }}</td>
+                            <td>{{ packet['tcp_dport'] }}</td>
+                            <td>{{ packet['payload'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
