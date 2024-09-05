@@ -45,8 +45,56 @@ Follow these instructions to get the Network Packet Sniffer Web Application up a
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/packet-sniffer-web-app.git
-   ```
-   ```bash
    cd packet-sniffer-web-app
-   ```
+
+2. Install the required dependencies:
+      ```bash
+   pip install -r requirements.txt
+
+3. The SQLite database will be automatically created when you run the application for the first time.
+
+## Usage
+
+1. Start the Flask application:
+   ```bash
+   python app.py
+
+2. Open your web browser and navigate to http://localhost:5500.
+
+3. Use the web interface to start packet sniffing by specifying the number of packets and filter type, then view the captured packet data in the table.
+
+4. Access the packet data via the API at http://localhost:5500/api/packets.
+      
+## Example
+
+1. Start the application:
+   ```bash
+   python app.py
+
+2. Fetch packet data via API:
+   ```bash
+   curl http://localhost:5500/api/packets
+
    
+3. Example JSON Response:
+   ```bash
+   [
+    {
+        "id": 1,
+        "timestamp": "2024-09-05T12:34:56",
+        "ip_src": "192.168.1.1",
+        "ip_dst": "192.168.1.2",
+        "tcp_sport": 12345,
+        "tcp_dport": 80,
+        "payload": "GET / HTTP/1.1\r\n..."
+    }
+   ]
+
+## Contribution
+
+- If you would like to contribute to this project, feel free to open an issue or submit a pull request we need more coders like you. Welcome!
+
+## License
+
+- This project is licensed under the <a href = "LICENSE"> MIT License</a>
+- Feel free to suggest about more features and improvements.
