@@ -42,7 +42,7 @@ Follow these instructions to get the Network Packet Sniffer Web Application up a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/packet-sniffer-web-app.git
+   git clone https://github.com/MUKHTAR-02/Network-Packet-Sniffer
    cd packet-sniffer-web-app
 
 2. Install the required dependencies:
