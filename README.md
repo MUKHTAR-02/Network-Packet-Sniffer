@@ -29,8 +29,6 @@ The **Network Packet Sniffer Web Application** is designed to capture and displa
 Follow these instructions to get the Network Packet Sniffer Web Application up and running on your local machine.
 
 ### Recommended
-
-- Works well on various network interfaces.
 - Ensure you have the necessary permissions to capture network packets on your machine.
 
 ### Prerequisites
