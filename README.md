@@ -26,3 +26,12 @@ Before running the application, ensure you have the following installed:
    ```bash
    git clone https://github.com/yourusername/packet-sniffer-web-app.git
    cd packet-sniffer-web-app
+
+## Install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+
+## Setup Database
+
+The application automatically creates the SQLite database file (packets.db) when run for the first time. Ensure the script has the necessary permissions to write to the directory.
