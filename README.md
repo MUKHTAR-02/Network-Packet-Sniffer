@@ -45,4 +45,8 @@ Follow these instructions to get the Network Packet Sniffer Web Application up a
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/packet-sniffer-web-app.git
+   ```
+   ```bash
    cd packet-sniffer-web-app
+   ```
+   
